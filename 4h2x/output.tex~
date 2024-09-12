@@ -1,0 +1,29 @@
+\documentclass{ximera}
+\title{Limit example}  %% Only if there is a title, omit this line otherwise
+\author{Bart Snapp}  %% Only if there is an author, omit this line otherwise
+\license{CC BY-NC-SA 4.0}  %% Only if there is a license, omit this line otherwise
+\begin{document}   
+\begin{abstract}  %% Only if there is an abstract, omit this line otherwise
+A short Ximera activity with a limit
+\end{abstract}  %% Only if there is an abstract, omit this line otherwise
+\maketitle  %% Only if there is a title, omit this line otherwise
+
+\begin{example}
+Compute
+\[
+\lim_{x \to 3} \frac{x^2 + 6x - 5}{x - 3}.
+\]
+\begin{solution}
+Note that when $x \neq 3$, we may write
+\begin{align*}
+\frac{x^2 + 6x - 5}{x - 3} &= \frac{(x-3)\answer{x+9}}{x-3} \\
+&= \answer{x+9}.
+\end{align*}
+Since the definition of this limit assumes \wordChoice{\choice{differentiability} \choice[correct]{continuity} \choice{integrability}}, $x \neq 3$, the limit exists. Thus,
+\[
+\lim_{x \to 3} \frac{x^2 + 6x - 5}{x - 3} = \lim_{x \to 3} \answer{x+9} = \answer{12}.
+\]
+\end{solution}
+\end{example}
+
+\end{document}

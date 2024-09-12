@@ -1,0 +1,47 @@
+\documentclass{ximera}
+\title{Some linear algebra}         %% Title from the double-underlined text
+\author{Bart Snapp}                 %% Author name from the notes
+\license{CC BY-NC-SA 4.0}           %% License from the notes
+\begin{document}
+\maketitle                         %% Create the title
+
+\begin{abstract}
+  We'll prove that a basis is a minimal spanning set   %% Abstract content without parentheses
+\end{abstract}
+
+\begin{definition}
+  A set of vectors $\beta$ is a \textbf{basis} for a $K$-vector space $V$ if
+  \begin{enumerate}
+    \item The elements of $\beta$ are linearly independent, meaning
+    \[
+      \sum_{i} a_i \vec{b}_i = 0 \Rightarrow a_1 = a_2 = \cdots = a_n = 0
+    \]
+    where $\left| \beta \right| = n$ and $a_i \in K$
+    \item $V$ is spanned by $\beta$, meaning for all $\vec{v} \in V$
+    \[
+      \vec{v} = \sum_{i} a_i \vec{b}_i
+    \]
+    for some $a_i \in K$.
+  \end{enumerate}
+\end{definition}
+
+\begin{theorem}
+  (Basis and minimal spanning set) Given a vector space $V$, if a spanning set $S$ is minimal with respect to the number of elements, then $S$ is a basis for $V$.
+  \begin{proof}
+    We must show that the vectors in a minimal spanning set are linearly independent. Seeking a contradiction, suppose they are not linearly independent. In this case
+    \[
+      a_1 \vec{s}_1 + \cdots + a_n \vec{s}_n = 0
+    \]
+    Without loss of generality (WLOG), say $a_n \neq 0$. Now we may write
+    \[
+      a_1 \vec{s}_1 + \cdots + a_{n-1} \vec{s}_{n-1} = -a_n \vec{s}_n
+    \]
+    so
+    \[
+      -\frac{a_1}{a_n} \vec{s}_1 - \cdots - \frac{a_{n-1}}{a_n} \vec{s}_{n-1} = \vec{s}_n
+    \]
+    Hence, $\vec{s}_1, \ldots, \vec{s}_{n-1}$ spans $V$, and this is a contradiction as $S$ was assumed to be minimal.
+  \end{proof}
+\end{theorem}
+
+\end{document}
